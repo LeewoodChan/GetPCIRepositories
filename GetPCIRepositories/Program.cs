@@ -12,9 +12,9 @@ namespace GetPCIRepositories
     {
         static void Main(string[] args)
         {
-            string inputPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location),"input.txt");
+            string inputPath = Path.Combine(Environment.CurrentDirectory.ToString(),"input.txt");
             Console.WriteLine(inputPath);
-            string outputPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "input.csv");
+            string outputPath = Path.Combine(Environment.CurrentDirectory.ToString(), "input.csv");
             using (StreamReader Reader =new StreamReader(inputPath))
             {
                 string line;
